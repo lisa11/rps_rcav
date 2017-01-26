@@ -1,0 +1,29 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-8">
+      <a href="/rock">Play Rock</a>
+      <a href="/paper">Play Paper</a>
+      <a href="/scissors">Play Scissors</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-4">
+      <h1> You played <%= @player_move %>! </h1>
+    </div>
+    <div class="col-sm-4">
+      <h1>
+        The computer played
+        <%= @computer_move %>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>
+        You <%= @outcome %>!
+      </h1>
+    </div>
+  </div>
+</div>
