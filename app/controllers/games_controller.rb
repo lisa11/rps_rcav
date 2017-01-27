@@ -6,28 +6,28 @@ class GamesController < ApplicationController
   end
 
   def play_rock
-    @player_move = "rock"
-    @computer_move = ["rock", "paper", "scissors"].sample
+    @player_move = "Rock"
+    @computer_move = ["Rock", "Paper", "Scissors"].sample
 
-    if @computer_move == "rock"
+    if @computer_move == "Rock"
       @outcome = "tied"
-    elsif @computer_move == "paper"
+    elsif @computer_move == "Paper"
       @outcome = "lose"
     else
-      @outcome = "win"
+      @outcome = "won"
     end
 
     render("games/play_game.html.erb")
   end
 
   def play_scissors
-    @player_move = "scissors"
-    @computer_move = ["rock", "paper", "scissors"].sample
+    @player_move = "Scissors"
+    @computer_move = ["Rock", "Paper", "Scissors"].sample
 
-    if @computer_move == "rock"
+    if @computer_move == "Rock"
       @outcome = "lose"
-    elsif @computer_move == "paper"
-      @outcome = "win"
+    elsif @computer_move == "Paper"
+      @outcome = "won"
     else
       @outcome = "tied"
     end
@@ -36,12 +36,12 @@ class GamesController < ApplicationController
   end
 
   def play_paper
-    @player_move = "paper"
-    @computer_move = ["rock", "paper", "scissors"].sample
+    @player_move = "Paper"
+    @computer_move = ["Rock", "Paper", "Scissors"].sample
 
-    if @computer_move == "rock"
-      @outcome = "win"
-    elsif @computer_move == "paper"
+    if @computer_move == "Rock"
+      @outcome = "won"
+    elsif @computer_move == "Paper"
       @outcome = "tied"
     else
       @outcome = "lose"
