@@ -27,13 +27,7 @@
           <h2>Player: <%= @player_move %></h2>
         </div>
         <div class="panel-body text-center">
-          <% if @player_move == "scissors"%>
-          <i class="fa fa-hand-scissors-o" aria-hidden="true" style="font-size: 10em;"></i>
-          <% elsif @player_move == "rock"%>
-          <i class="fa fa-hand-rock-o" aria-hidden="true" style="font-size: 10em;"></i>
-          <% else %>
-          <i class="fa fa-hand-paper-o" aria-hidden="true" style="font-size: 10em;"></i>
-          <% end %>
+          <i class="fa <%=@player_hand%>" aria-hidden="true" style="font-size: 10em;"></i>
         </div>
       </div>
     </div>
@@ -46,13 +40,7 @@
           </h2>
         </div>
         <div class="panel-body text-center">
-          <% if @computer_move == "scissors"%>
-          <i class="fa fa-hand-scissors-o" aria-hidden="true" style="font-size: 10em;"></i>
-          <% elsif @computer_move == "rock"%>
-          <i class="fa fa-hand-rock-o" aria-hidden="true" style="font-size: 10em;"></i>
-          <% else %>
-          <i class="fa fa-hand-paper-o" aria-hidden="true" style="font-size: 10em;"></i>
-          <% end %>
+          <i class="fa <%=@computer_hand%>" aria-hidden="true" style="font-size: 10em;"></i>
         </div>
       </div>
     </div>
@@ -60,19 +48,9 @@
     <div class="row">
       <div class="col-xs-12 text-center" style="background-color: #F8F8F8;">
         <h1>
-          <% if @outcome == "won"%>
-          <span class="label label-success">
+          <span class="label  <%=@label_color%>">
             You <%= @outcome %>!
           </span>
-          <% elsif @outcome == "lose"%>
-          <span class="label label-danger">
-            You <%= @outcome %>!
-          </span>
-          <% else %>
-          <span class="label label-warning">
-            You <%= @outcome %>!
-          </span>
-          <% end %>
         </h1>
       </div>
     </div>
